@@ -9,3 +9,7 @@
 5.times do
   Category.create(name: Faker::Book.genre)
 end
+
+10.times do
+  Feature.create(name: Faker::Book.genre)
+end
