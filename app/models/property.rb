@@ -14,6 +14,9 @@ class Property < ApplicationRecord
   # Relaciones
   belongs_to :category
   belongs_to :user
+  # Relaciones
+  has_many :property_features
+  has_many :features, through: :property_features
 
   # Validaciones
   validates :name,        presence: true

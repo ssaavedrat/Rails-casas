@@ -8,6 +8,11 @@
 #  updated_at :datetime         not null
 #
 class Feature < ApplicationRecord
+  # Validaciones
   validates :name,    presence: true,
                       uniqueness: true
+
+  # Relaciones
+  has_many :property_features
+  has_many :properties, through: :property_features
 end
