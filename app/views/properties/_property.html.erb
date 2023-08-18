@@ -12,6 +12,12 @@
     <%= property.category.name %>
   </p>
   <p>
+    <strong>Feature:</strong>
+    <% @property.features.each do |item| %>
+      <%= content_tag :span, item.name, class: "tag" %>
+    <% end %>
+  </p>
+  <p>
     <strong>User:</strong>
     <%= property.user.email %>
   </p>
